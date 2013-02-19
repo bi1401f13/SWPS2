@@ -6,3 +6,6 @@ Student project, more to come
 
 
 Du skal ikke skrive sådan noget fis!!!
+
+
+Jo jeg skal så! 
