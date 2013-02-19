@@ -3,4 +3,6 @@ SWPS2
 
 Student project, more to come
 
-Jeg har lige skrevet noget fis!!! 
+
+
+Du skal ikke skrive sådan noget fis!!!
