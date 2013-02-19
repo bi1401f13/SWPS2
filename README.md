@@ -13,3 +13,5 @@ Jo jeg skal så!
 fisfisfis
 
 PIKE
+
+PIKE2
