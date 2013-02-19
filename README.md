@@ -11,3 +11,5 @@ Du skal ikke skrive sådan noget fis!!!
 Jo jeg skal så! 
 
 fisfisfis
+
+PIKE
