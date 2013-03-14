@@ -4,7 +4,7 @@
 </head>
 
 <body>
-	<form action="test_login.php" method="post" enctype="multipart/form-data">
+	<form>
 		<label>Username:</label> 
 		<input type="text" value="" />
 
