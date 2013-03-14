@@ -1,0 +1,93 @@
+* {
+		margin:0;
+		padding:0;
+}
+
+body {
+		font-family: "Helvetica";
+        font-size:1em;
+}
+
+fieldset {
+		border:0;
+}
+
+#create_shift_popup {
+		padding:20px;
+        width:870px;
+        border: 1px solid #888;
+        border-radius:4px;
+        margin:10px auto;
+        overflow:auto;
+}
+
+#create_shift_popup #create, #create_shift_popup #overview {
+        float:left;  
+}
+
+#create_shift_popup #create {
+		width:310px;
+        margin:0 60px 0 0
+}
+
+#create_shift_popup #create label {
+		display: block;
+		margin:0 0 3px 0;
+}
+
+#create_shift_popup #create input[type='text'],
+#create_shift_popup #create select {
+		margin:0 0 15px 0;
+		height:30px;
+}
+
+#create_shift_popup #create input[type='text'] {
+		padding:0 0 0 5px;
+        width:90px;
+}
+
+#create_shift_popup #create textarea {
+		height:150px;
+		resize:none;
+        padding:0 0 0 5px;
+        width:300px;
+}
+
+#create_shift_popup #create input[type='submit'] {
+        background:#0DAAD1;
+        border:0;
+        border-radius:2px;
+        color:#fff;
+        display:inline-block;
+        font-weight:bold;
+        font-size:14px;
+        padding:10px;
+}
+
+#create_shift_popup #overview {
+
+}
+
+#create_shift_popup #overview table {
+        border-spacing:0;
+        border-collapse:collapse;
+}
+
+#create_shift_popup #overview table th {
+        font-weight:normal;
+        font-size:16px;
+        padding:5px;
+        border-right:1px solid #ccc;
+}
+
+#create_shift_popup #overview table tr, #create_shift_popup #overview table td {
+        border:1px solid #ccc; 
+        padding:5px;
+
+}
+
+#create_shift_popup #overview table tr td:last-of-type {
+        text-align:center;
+        cursor:pointer;
+}
+
