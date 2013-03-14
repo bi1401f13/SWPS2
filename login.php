@@ -18,13 +18,14 @@ $password = mysql_real_escape_string($password);
 
 // check login information from login window to database for verification
 $sql="SELECT * FROM $tbl_name WHERE username='$username' and password='$password'";
-$result=mysql_query($sql);
+$result=mysqli_query($sql);
 
 // counts number of rows in the result to ensure that the inputdata is only one row
-$count=mysql_num_rows($result);
+$count=mysqli_stmt_num_rows($result);
 if($count==1){
 
 // redirect if login is successfull
+
 session_register("username");
 session_register("password");
 header("location:login_success.php");
