@@ -2,7 +2,7 @@
 <head>
 	<title>CTRL-ALL-SHIFTS</title>
 </head>
-
+<center>
 <body>
 	<form action="test_login.php" method="post" enctype="multipart/form-data">
 		<label>Username:</label> 
@@ -13,5 +13,6 @@
 
 		<input type="submit" value="Login" />
 	</form>
+	</center>
 </body>
 </html>
