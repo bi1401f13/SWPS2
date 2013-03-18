@@ -1,0 +1,15 @@
+* {
+		margin:0;
+		padding:0;
+}
+
+body {
+		font-family: "Helvetica";
+        font-size:1em;
+        background:#ff6600;
+}
+
+#calendar_table {
+	text-align: center; 
+
+}
