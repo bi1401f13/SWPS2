@@ -50,14 +50,14 @@ function addShift($startMonth, $endMonth, $startDate, $endDate, $startTime, $end
     $shiftStart = $year.'-'.$startMonth.'-'.$startDate.' '.$startTime;
     $shiftEnd = $year.'-'.$endMonth.'-'.$endDate.' '.$endTime;
     
-    $sql_query ="INSERT INTO shifts (shift_start, shift_end, work_function, notes) VALUES ('$shiftStart', '$shiftEnd', '$workFunction', '$notes')";
+    $sql_query ="INSERT INTO shift (shift_start, shift_end, skill_id, note) VALUES ('$shiftStart', '$shiftEnd', '$workFunction', '$notes')";
     
     executeQuery($sql_query); 
 }
 
 // Function to delete shift by shift-id (which is unique)
 function deleteShift($shift_id){
-    $sql_query = "DELETE FROM shifts WHERE shift_id = '$shift_id'"; 
+    $sql_query = "DELETE FROM shift WHERE shift_id = '$shift_id'"; 
     
     executeQuery($sql_query);
 }
@@ -75,7 +75,7 @@ function checkIfEventExistOnDate($year, $month, $day){
     
     //http://www.w3schools.com/sql/func_datediff_mysql.asp
     //http://www.stillnetstudios.com/comparing-dates-without-times-in-sql-server/comment-page-1/
-    $sql_query ="SELECT * FROM shifts WHERE DATEDIFF(shift_start, '$date') = 0 OR DATEDIFF(shift_end, '$date') = 0"; 
+    $sql_query ="SELECT * FROM shift WHERE DATEDIFF(shift_start, '$date') = 0 OR DATEDIFF(shift_end, '$date') = 0"; 
     
     // Use query function (executeQuery()) to return result of query
     $query_result = executeQuery($sql_query);
@@ -97,7 +97,7 @@ function returnEventsOnDate($year, $month, $day){
     //http://www.w3schools.com/sql/func_datediff_mysql.asp
     //http://www.stillnetstudios.com/comparing-dates-without-times-in-sql-server/comment-page-1/
     // HUSK at rette, så vi selecter de aktuelle felter og ikke bruger '*' - det gør man kun i testmiljø. 
-    $sql_query ="SELECT * FROM shifts WHERE DATEDIFF(shift_start, '$date') = 0 OR DATEDIFF(shift_end, '$date') = 0";
+    $sql_query ="SELECT * FROM shift WHERE DATEDIFF(shift_start, '$date') = 0 OR DATEDIFF(shift_end, '$date') = 0";
     
     // Use query function (executeQuery()) to return result of query
     $query_result = executeQuery($sql_query);
@@ -108,8 +108,8 @@ function returnEventsOnDate($year, $month, $day){
         echo "<tr>
                 <td>".$row['shift_start']."</td>
                 <td>".$row['shift_end']."</td>
-                <td>".$row['work_function']."</td>
-                <td>".$row['notes']."</td>
+                <td>".$row['skill_id']."</td>
+                <td>".$row['note']."</td>
                 <td><a href='browseDate.php?year=".$year."&month=".$month."&day=".$day."&shift_id=".$row['shift_id']."&deleteShift=yes'><img src='images/trashcan.png' alt='Delete shift' title='Delete this shift' /></a>
               </tr>";
     } 
