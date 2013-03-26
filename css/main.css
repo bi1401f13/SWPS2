@@ -1,0 +1,17 @@
+* {
+		margin:0;
+		padding:0;
+}
+
+body {
+		font-family: "Helvetica";
+        font-size:1em;
+        background:#ffffff;
+}
+
+#menu li {
+	float:left;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
